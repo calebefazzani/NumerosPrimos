@@ -12,7 +12,7 @@ public class NumeroPrimo {
 
 	public void setValor(Integer valor) {
 		this.valor = valor;
-		setPrimo(IntStream.rangeClosed(1, getValor()).filter(el -> getValor() % el == 0).count() == 2);
+//		setPrimo(IntStream.rangeClosed(1, getValor()).filter(el -> getValor() % el == 0).count() == 2);
 	}
 
 	public Boolean getPrimo() {
