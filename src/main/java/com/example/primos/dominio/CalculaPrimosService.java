@@ -31,7 +31,7 @@ public class CalculaPrimosService {
 		return numeroPrimo;
 	}
 
-	private String getRequestBody() {
+	private String getRequestBody() { // Esse método é o q está fazendo a requisição
 		OkHttpClient client = new OkHttpClient();
 		Request request = new Request.Builder().url(getUrl()).build();
 		try (Response response = client.newCall(request).execute()) {
@@ -45,7 +45,7 @@ public class CalculaPrimosService {
 	}
 
 	private String getUrl() {
-		Integer id = new Random().nextInt(10) + 1;
+		Integer id = new Random().ints(1, 1, 10).findFirst().orElse(1);
 		return BASE_URL + id;
 
 	}

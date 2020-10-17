@@ -20,7 +20,7 @@ public class CalculoRequest {
 	@Autowired
 	private CalculaPrimosService service;
 	
-	@GetMapping("/")
+	@GetMapping("/") // http://localhost:8080/api/
 	public ResponseEntity<NumeroPrimo> getCalculo() {
 		try {
 			NumeroPrimo primo = service.getPrimo();
